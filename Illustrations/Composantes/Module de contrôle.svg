@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="vdr-4-2.svg">
+   sodipodi:docname="Module de contrôle.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#272727"
@@ -24,13 +24,13 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.8480106"
-     inkscape:cx="356.12728"
-     inkscape:cy="308.55392"
+     inkscape:cx="483.08291"
+     inkscape:cy="314.53039"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1680"
-     inkscape:window-height="1001"
+     inkscape:window-height="1003"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
      inkscape:window-maximized="1"
@@ -137,7 +137,7 @@
      style="display:inline"
      transform="translate(-13.633159,-148.50134)">
     <rect
-       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4991"
        width="959.73376"
        height="464.99741"
@@ -468,50 +468,6 @@
          style="font-size:14px" /></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans Bold"
-       x="864.45441"
-       y="396.5672"
-       id="text3540"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3542"
-         x="864.45441"
-         y="396.5672">MANOMETRE</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans Bold"
-       x="864.42706"
-       y="439.94748"
-       id="text3544"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3546"
-         x="864.42706"
-         y="439.94748">PHASITRON</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans Bold"
-       x="865.44562"
-       y="483.24911"
-       id="text3548"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3550"
-         x="865.44562"
-         y="483.24911">ACCESSOIRES</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans Bold"
-       x="864.40656"
-       y="527.94531"
-       id="text3552"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3554"
-         x="864.40656"
-         y="527.94531">NEBULISATION</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:14.04082203px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
        x="583.29022"
        y="403.18015"
@@ -581,6 +537,50 @@
          id="tspan4187"
          x="429.08075"
          y="565.17877">POUSSER</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Sans Bold"
+       x="812.83124"
+       y="395.85138"
+       id="text3540"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3542"
+         x="812.83124"
+         y="395.85138">MANOMETRE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Sans Bold"
+       x="821.20428"
+       y="439.27872"
+       id="text3544"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3546"
+         x="821.20428"
+         y="439.27872">PHASITRON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Sans Bold"
+       x="804.12421"
+       y="482.70901"
+       id="text3548"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3550"
+         x="804.12421"
+         y="482.70901">ACCESSOIRES</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Sans Bold"
+       x="801.86835"
+       y="526.13928"
+       id="text3552"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3554"
+         x="801.86835"
+         y="526.13928">NEBULISATION</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -591,7 +591,7 @@
     <g
        style="display:inline"
        id="g7942"
-       transform="matrix(0.95150953,-0.30761926,0.30761926,0.95150953,-182.22037,307.33795)">
+       transform="matrix(0.95150953,-0.30761926,0.30761926,0.95150953,-102.17154,307.33795)">
       <path
          sodipodi:type="star"
          style="fill:none;stroke:#000000;stroke-width:1.28197622;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -625,7 +625,7 @@
        y="0"
        xlink:href="#g7942"
        id="use7946"
-       transform="translate(4.9999997e-7,-130.29085)"
+       transform="translate(9.459961e-7,-130.29085)"
        width="990"
        height="765" />
     <use
@@ -634,7 +634,7 @@
        y="0"
        xlink:href="#g7942"
        id="use7952"
-       transform="translate(4.9999997e-7,-43.430294)"
+       transform="translate(9.459961e-7,-43.430294)"
        width="990"
        height="765" />
     <use
@@ -643,7 +643,7 @@
        y="0"
        xlink:href="#use7952"
        id="use7954"
-       transform="translate(5e-7,-43.430284)"
+       transform="translate(9.459961e-7,-43.430284)"
        width="990"
        height="765" />
   </g>
@@ -666,7 +666,7 @@
          sodipodi:cy="267.14911"
          sodipodi:rx="37.638798"
          sodipodi:ry="37.638798"
-         d="m 498.8545,267.14911 c 0,20.78733 -16.85147,37.6388 -37.6388,37.6388 -20.78734,0 -37.6388,-16.85147 -37.6388,-37.6388 0,-20.78734 16.85146,-37.6388 37.6388,-37.6388 20.78733,0 37.6388,16.85146 37.6388,37.6388 z"
+         d="m 498.8545,267.14911 a 37.638798,37.638798 0 1 1 -75.2776,0 37.638798,37.638798 0 1 1 75.2776,0 z"
          transform="translate(-44.072841,308.07022)" />
       <path
          sodipodi:type="arc"
@@ -676,7 +676,7 @@
          sodipodi:cy="272.76685"
          sodipodi:rx="19.662058"
          sodipodi:ry="19.662058"
-         d="m 483.12486,272.76685 c 0,10.85905 -8.80301,19.66205 -19.66206,19.66205 -10.85906,0 -19.66206,-8.803 -19.66206,-19.66205 0,-10.85906 8.803,-19.66206 19.66206,-19.66206 10.85905,0 19.66206,8.803 19.66206,19.66206 z"
+         d="m 483.12486,272.76685 a 19.662058,19.662058 0 1 1 -39.32412,0 19.662058,19.662058 0 1 1 39.32412,0 z"
          transform="translate(-46.319942,302.45248)" />
       <text
          xml:space="preserve"
@@ -813,7 +813,7 @@
            x="64.954285"
            y="682.388">11</tspan></text>
       <path
-         d="m 498.8545,267.14911 c 0,20.78733 -16.85147,37.6388 -37.6388,37.6388 -20.78734,0 -37.6388,-16.85147 -37.6388,-37.6388 0,-20.78734 16.85146,-37.6388 37.6388,-37.6388 20.78733,0 37.6388,16.85146 37.6388,37.6388 z"
+         d="m 498.8545,267.14911 a 37.638798,37.638798 0 1 1 -75.2776,0 37.638798,37.638798 0 1 1 75.2776,0 z"
          sodipodi:ry="37.638798"
          sodipodi:rx="37.638798"
          sodipodi:cy="267.14911"
@@ -824,7 +824,7 @@
          transform="translate(-44.072841,308.07022)" />
       <path
          transform="translate(-46.319942,302.45248)"
-         d="m 483.12486,272.76685 c 0,10.85905 -8.80301,19.66205 -19.66206,19.66205 -10.85906,0 -19.66206,-8.803 -19.66206,-19.66205 0,-10.85906 8.803,-19.66206 19.66206,-19.66206 10.85905,0 19.66206,8.803 19.66206,19.66206 z"
+         d="m 483.12486,272.76685 a 19.662058,19.662058 0 1 1 -39.32412,0 19.662058,19.662058 0 1 1 39.32412,0 z"
          sodipodi:ry="19.662058"
          sodipodi:rx="19.662058"
          sodipodi:cy="272.76685"
@@ -1103,7 +1103,7 @@
          sodipodi:cy="199.62607"
          sodipodi:rx="10.110333"
          sodipodi:ry="10.110333"
-         d="m 768.80223,199.62607 c 0,5.58378 -4.52655,10.11033 -10.11034,10.11033 -5.58378,0 -10.11033,-4.52655 -10.11033,-10.11033 0,-5.58378 4.52655,-10.11034 10.11033,-10.11034 5.58379,0 10.11034,4.52656 10.11034,10.11034 z"
+         d="m 768.80223,199.62607 a 10.110333,10.110333 0 1 1 -20.22067,0 10.110333,10.110333 0 1 1 20.22067,0 z"
          transform="matrix(1.073568,0,0,1.073568,93.589979,304.71321)" />
     </g>
     <g
@@ -1128,7 +1128,7 @@
          sodipodi:type="star" />
       <path
          transform="matrix(1.073568,0,0,1.073568,93.589979,304.71321)"
-         d="m 768.80223,199.62607 c 0,5.58378 -4.52655,10.11033 -10.11034,10.11033 -5.58378,0 -10.11033,-4.52655 -10.11033,-10.11033 0,-5.58378 4.52655,-10.11034 10.11033,-10.11034 5.58379,0 10.11034,4.52656 10.11034,10.11034 z"
+         d="m 768.80223,199.62607 a 10.110333,10.110333 0 1 1 -20.22067,0 10.110333,10.110333 0 1 1 20.22067,0 z"
          sodipodi:ry="10.110333"
          sodipodi:rx="10.110333"
          sodipodi:cy="199.62607"
@@ -1173,7 +1173,7 @@
          id="g7902"
          transform="translate(8.6467133,14)">
         <path
-           d="m 472.87144,377.94339 c 0,8.14089 -6.33551,14.74038 -14.15077,14.74038 -7.81525,0 -14.15076,-6.59949 -14.15076,-14.74038 0,-8.14089 6.33551,-14.74038 14.15076,-14.74038 7.81526,0 14.15077,6.59949 14.15077,14.74038 z"
+           d="m 472.87144,377.94339 a 14.150766,14.740382 0 1 1 -28.30153,0 14.150766,14.740382 0 1 1 28.30153,0 z"
            sodipodi:ry="14.740382"
            sodipodi:rx="14.150766"
            sodipodi:cy="377.94339"
