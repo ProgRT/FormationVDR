@@ -7,27 +7,64 @@
 
   <title>Ventilateur VDR-4</title>
 
-  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="css/chum.css">
 
-  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
-  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
-  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
-
-  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
-  <link rel="stylesheet" media="screen" href="themes/transition/fade.css">
-  <link rel="stylesheet" media="print" href="core/print.css">
-
-
-  <script src="Scripts/modernizr.custom.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="Scripts/modernizr.custom.js"></script>
+	<script src="https://rawgit.com/ProgRT/simvent.js/master/simvent.js" charset="utf-8"></script>
+	<script src="http://rawgit.com/progrt/graphsimple.js/master/graphsimple.js" charset="utf-8"></script>
+	<script src="http://rawgit.com/progrt/graphsimple.js/master/graphsimple.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="http://rawgit.com/progrt/graphsimple.js/master/css/graphsimple-clear.css" charset="utf-8"></script>
 
   <style>
-  	.slide img {
-	max-height: 500px;
+	.deck-container {
+	font-size: 22pt;
 	}
+	section {
+	height: 100%;
+	}
+	.logo{
+		height: 3cm;
+		position: absolute;
+		left:1cm;
+		bottom: 1cm;
+		padding: 0px;
+		margin: 0px;
+		}
+	table {
+		margin-left: auto;
+		margin-right: auto;
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+	}
+	th {
+		border-top: 1px;
+		border-bottom:1px solid;
+	}
+	th, td {
+	padding-left: 15px;
+	padding-right: 15px;
+	}
+	svg {
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		width: 75%;
+		height: 40%;
+		}
+	/*
+	.square {
+		width: 400px;
+		height: 400px;
+		}
+		*/
+	.tick, .domain {
+		display: none;
+		}
+		
   </style>
 
 </head>
-
 <body>
 
 <div class="deck-container">
@@ -38,6 +75,7 @@
 	<P>Service d'inhalothérapie</p>
 	<p>Juillet 2016</p>
 	</div>
+	<img class="logo" src="LogoCHUM/LogoCHUMNoir.svg"></img>
 </section>
 
 <section class="slide">
@@ -50,31 +88,35 @@
 
 <section class="slide">
 	<h2>Vue d'ensemble</h2>
-	<img src="Illustrations/Figures/Figure - Schema système.svg"><img>
+	<img src="Illustrations/Figures/Figure - Schema système.svg"></img>
 </section>
 
 <section class="slide">
 <h2>Module de contrôle</h2>
-	<img src="Illustrations/Figures/Figure - Schema système.svg"><img>
+	<img src="Illustrations/Figures/Figure - Schema système.svg"></img>
 </section>
 
 <section class="slide">
 	<h2>Le phasitron</h2>
-	<img src="Illustrations/Figures/Figure - Fonctionnement phasitron.svg"><img>
+	<img src="Illustrations/Figures/Figure - Fonctionnement phasitron.svg"></img>
 </section>
 
 <section class="slide">
 	<h2>Humidification</h2>
-	<img src="Illustrations/Figures/Circuits humidification.svg"><img>
+	<img src="Illustrations/Figures/Circuits humidification.svg"></img>
 </section>
 
 <section class="slide">
 	<h2>Monitorage</h2>
-	<img src="Illustrations/Composantes/Monitron.svg"><img>
+	<img src="Illustrations/Composantes/Monitron.svg"></img>
 </section>
 
 <section class="slide">
 	<h1>Paramètres de ventilation</h1>
+</section>
+
+<section class="slide" id="courbe">
+	<h2>Paramètres de ventilation</h2>
 </section>
 
 <section class="slide">
@@ -158,21 +200,84 @@
 	</ul>
 </section>
 
+<section class="slide">
+	<h2>Valeurs extrèmes</h2>
+	<table>
+		<tr>
+			<th>Paramètre</th>
+			<th>Valeur min.</th>
+			<th>Valeur max.</th>
+		</tr>
+		<tr>
+			<td>Crète inspiratoire</td>
+			<td>20 cmH₂O</td>
+			<td>45 cmH₂O</td>
+		</tr>
+		<tr>
+			<td>Crète expiratoire</td>
+			<td>10 cmH₂O</td>
+			<td>20 cmH₂O</td>
+		</tr>
+		<tr>
+			<td>Fréquence de percussion</td>
+			<td>300 /min.</td>
+			<td>700 /min.</td>
+		</tr>
+		<tr>
+			<td>i:e (percussion)</td>
+			<td>1:5</td>
+			<td>1:1</td>
+		</tr>
+		<tr>
+			<td>Fréquence de convection</td>
+			<td></td>
+			<td>18 /min.</td>
+		</tr>
+		<tr>
+			<td>I:E (convection)</td>
+			<td>1:1</td>
+			<td>1,5:1</td>
+		</tr>
+	</table>
+</section>
+
 <div class="deck-toc"></div>
-<!-- deck.status snippet -->
+
 <p class="deck-status" aria-role="status">
-<span class="deck-status-current"></span>
-/
-<span class="deck-status-total"></span>
+	<span class="deck-status-current"></span> / <span class="deck-status-total"></span>
 </p>
 
 </div>
 
 <script src="Scripts/jquery.min.js"></script>
 <script src="Scripts/deck.core.js"></script>
-<script src="Scripts/menu/deck.menu.js"></script>
-<script src="Scripts/goto/deck.goto.js"></script>
-<script src="Scripts/status/deck.status.js"></script>
+<script src="Scripts/deck.menu.js"></script>
+<script src="Scripts/deck.goto.js"></script>
+<script src="Scripts/deck.status.js"></script>
+<script src="Scripts/deck.toc.js"></script>
+
+<script>
+	var lung = new sv.SimpleLung();
+	var ventilator = new sv.VDR();	
+	var data = ventilator.ventilate(lung).timeData;
+	
+	function fx(d){return d.time}
+	function fy(d){return d.Pao}
+	var conf = {
+		class: "square",
+		margeG: 60,
+		margeD: 10,
+		margeB: 40,
+		padD: 0,
+		padH: 0
+	}
+
+	gs.graph.margeG = 40;
+	var graph = gs.addGraph("courbe", data, fx, fy, conf)
+		.drawGridX()
+		.drawGridY();
+
+</script>
 
 <script>
   $(function() {
