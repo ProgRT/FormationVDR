@@ -11,57 +11,109 @@
 
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="Scripts/modernizr.custom.js"></script>
+	<script src="Scripts/svg-injector.min.js"></script>
 	<script src="https://rawgit.com/ProgRT/simvent.js/master/simvent.js" charset="utf-8"></script>
 	<script src="http://rawgit.com/progrt/graphsimple.js/master/graphsimple.js" charset="utf-8"></script>
-	<script src="http://rawgit.com/progrt/graphsimple.js/master/graphsimple.js" charset="utf-8"></script>
+
 	<link rel="stylesheet" href="http://rawgit.com/progrt/graphsimple.js/master/css/graphsimple-clear.css" charset="utf-8"></script>
 
   <style>
 	.deck-container {
-	font-size: 22pt;
+		font-size: 20pt;
 	}
+
 	section {
-	height: 100%;
+		height: 100%;
 	}
+
 	.logo{
 		height: 3cm;
 		position: absolute;
-		left:1cm;
+		left: 1cm;
 		bottom: 1cm;
 		padding: 0px;
 		margin: 0px;
 		}
+
 	table {
 		margin-left: auto;
 		margin-right: auto;
 		border-bottom: 1px solid;
 		border-top: 1px solid;
 	}
+
 	th {
 		border-top: 1px;
 		border-bottom:1px solid;
 	}
+
 	th, td {
 	padding-left: 15px;
 	padding-right: 15px;
 	}
+
 	svg {
 		display:block;
 		margin-left:auto;
 		margin-right:auto;
-		width: 75%;
+	/*	width: 75%;
 		height: 40%;
+*/
 		}
+
+	.rect {
+		width: 100%;
+		height: 600px;	
+		}
+
 	/*
 	.square {
 		width: 400px;
 		height: 400px;
 		}
 		*/
+
+	.carton {
+		float: right;
+		width: 50%;
+		/* border-left: 2px solid gray; */
+		padding-left: 15px;
+		padding-right: 15px;
+		}
+
 	.tick, .domain {
 		display: none;
 		}
-		
+
+	#layer6, #g7601, #layer7 {
+	visibility: hidden
+	}
+
+	.on-slide-classiqueModifiee #g7601 {
+		visibility: visible;
+		}
+	
+	body {
+		counter-reset:section;
+		}
+	h1 {
+		counter-increment:section;
+		}
+	.slide h1:before {
+		content: counter(section) ' - ';
+		}
+	h2 {padding-top: 5px;
+	padding-left: 30px}
+	
+	dt {
+		font-weight: bold;
+		}
+		dd {
+		padding-left: 30px;
+		}
+	.slide ul, .slide ol, .slide dl, .slide p{
+	margin-left: 30px;
+	}
   </style>
 
 </head>
@@ -83,6 +135,31 @@
 </section>
 
 <section class="slide">
+	<h2>Vocabulaire</h2>
+	<dl>
+		<dt>Convection</dt>
+		<dd>Déplacement de volumes de gaz</dd>
+	</dl>
+</section>
+
+<section class="slide">
+	<h2>Ventilation à haute fréquence</h2>
+	<ul>
+		<li>Volumes inférieurs à l'espace mort</li>
+		<li>Mécanismes d'échanges gazeux multiples</li>
+		<li>Relation fréquence - volume courant</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Relation fréquence - volume courant</h2>
+	<ul>
+		<li>Ti = Tcycle * i:e</li>
+		<li>Tcycle = 60 / fréquence</li>
+	</ul>
+</section>
+
+<section class="slide">
 	<h1>Composantes du système</h1>
 </section>
 
@@ -93,7 +170,19 @@
 
 <section class="slide">
 <h2>Module de contrôle</h2>
-	<img src="Illustrations/Figures/Figure - Schema système.svg"></img>
+	<div class="carton">
+	<img src="Illustrations/Composantes/Module de controle.svg"></img>
+	</div>
+	<ul>
+		<li>Entièrement pneumatique(ou presque)
+		<li>Chaque réglage est une valve
+		<li>34 circuits logiques pneumatique
+	</ul>
+</section>
+
+<section class="slide">
+<h2>Fonctionnement d'une cartouche pneumatique</h2>
+	<img src="Illustrations/Figures/CartouchePneumatique.svg"></img>
 </section>
 
 <section class="slide">
@@ -103,7 +192,9 @@
 
 <section class="slide">
 	<h2>Humidification</h2>
-	<img src="Illustrations/Figures/Circuits humidification.svg"></img>
+	<span class="slide" id="classiqueModifiee"></span>
+
+	<img class="inject" src="Illustrations/Figures/Circuits humidification-clean.svg"></img>
 </section>
 
 <section class="slide">
@@ -121,10 +212,13 @@
 
 <section class="slide">
 	<h2>Paramètres d'amplitude</h2>
+	<div class="carton" id="cartonAmplitude"></div>
 	<ul>
+		<li>Boutons vert
 		<li>Réglage d'un débit (module de contrôle)
 		<li>Amplification du débit par le phasitron (variable)
 	</ul>
+
 	<h3>Amplitude des percussion à l'inspiration</h3>
 	<ul>
 		<li>Paramètre de base (indépendant)
@@ -241,6 +335,14 @@
 	</table>
 </section>
 
+<section class="slide">
+<h1>Monitorage<h1>
+</section>
+
+<section class="slide">
+<h1>Complications<h1>
+</section>
+
 <div class="deck-toc"></div>
 
 <p class="deck-status" aria-role="status">
@@ -259,12 +361,14 @@
 <script>
 	var lung = new sv.SimpleLung();
 	var ventilator = new sv.VDR();	
+	ventilator.Fperc=500;
+	ventilator.Tvent=8;
 	var data = ventilator.ventilate(lung).timeData;
 	
 	function fx(d){return d.time}
 	function fy(d){return d.Pao}
 	var conf = {
-		class: "square",
+		class: "rect",
 		margeG: 60,
 		margeD: 10,
 		margeB: 40,
@@ -272,10 +376,9 @@
 		padH: 0
 	}
 
-	gs.graph.margeG = 40;
-	var graph = gs.addGraph("courbe", data, fx, fy, conf)
-		.drawGridX()
-		.drawGridY();
+	var graph = gs.addGraph("courbe", data, fx, fy, conf);
+	
+	var graph = gs.addGraph("cartonAmplitude", data, fx, fy, conf);
 
 </script>
 
@@ -283,6 +386,11 @@
   $(function() {
     $.deck('.slide');
   });
+
+
+  // SVG injection  
+  var mySVGsToInject = document.querySelectorAll('img.inject');
+  SVGInjector(mySVGsToInject);
 </script>
 
 </body>

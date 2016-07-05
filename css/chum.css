@@ -374,20 +374,21 @@ body > .deck-container .deck-status {
   left: 0;
   /*right: 55%;*/
   padding: 0.625em;
-  padding-right: 10px;
+  padding-right: 30px;
   display: none;
-  background: #ccc;
+  /*background: #ccc;*/
   overflow-y: auto;
   overflow-x: auto;
   /* background-color: #DDE4EB;*/
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(242, 242, 242, 0.95);
   border-right: #A9A9A9 solid 1px;
   /*width: 500px;*/ }
   .deck-container .deck-toc ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    font-size: 1em; }
+    /*font-size: 1em;*/
+    font-size: .8em; }
     .deck-container .deck-toc ul li {
       white-space: nowrap;
       padding-left: 1.5em;
@@ -400,8 +401,8 @@ body > .deck-container .deck-status {
     width: 100%;
     display: block !important;
     text-decoration: none;
-    /*color: #595959 !important;*/
-    color: white; }
+    color: #595959 !important;
+    /*color: white;*/ }
 
 .deck-toc-frame .deck-toc {
   display: block; }
@@ -411,3 +412,5 @@ body > .deck-container .deck-status {
     display: none; } }
 .deck-container {
   height: 100%; }
+
+/*# sourceMappingURL=chum.css.map */
