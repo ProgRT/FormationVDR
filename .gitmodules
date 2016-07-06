@@ -1,0 +1,3 @@
+[submodule "graphsimple.js"]
+	path = graphsimple.js
+	url = https://github.com/progrt/graphsimple.js
