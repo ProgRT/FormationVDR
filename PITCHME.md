@@ -2,4 +2,4 @@
 
 #HSLIDE
 
-![Mon premier graphique](plots/amplitude.svg)
+![Mon premier graphique](http://rawgit.com/progrt/FormationVDR/master/plots/amplitude.svg)
