@@ -2,4 +2,4 @@
 
 #HSLIDE
 
-À venir...
+![Mon premier graphique](plots/amplitude.svg)
