@@ -4,3 +4,4 @@
 <script>
 document.write('Allo !');
 </script>
+Allo, le monde!
